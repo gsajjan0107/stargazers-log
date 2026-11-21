@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Stargazers log</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Stargazers log</h1>
-    <p>A log of the repositories I've starred.</p>
-    <ul id="starred"></ul>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stargazers Log</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container" aria-labelledby="page-title">
+    <header class="page-header">
+      <h1 id="page-title">Starred Repositories</h1>
+      <p id="page-description" class="subtitle">Recent repository stars recorded in the log.</p>
+    </header>
+
+    <section aria-labelledby="starred-heading">
+      <h2 id="starred-heading" class="visually-hidden">Starred repository entries</h2>
+      <ul id="starred" aria-describedby="page-description" aria-live="polite">
+        <li data-state="loading">Loading starred repositories&hellip;</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
 </html>
